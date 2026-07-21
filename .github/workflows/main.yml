@@ -35,8 +35,7 @@ jobs:
             ${{ runner.os }}-pip-
       # Install dependencies with `pip`
       - name: Install requirements
-        run: |
-          python3 -m pip install --upgrade pip setuptools wheel
+        run: |          
           python3 -m pip cache purge
           python3 -m pip install --no-cache-dir -r requirements.txt
           pip install -e .
